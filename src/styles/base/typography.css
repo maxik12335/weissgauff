@@ -1,0 +1,45 @@
+
+.h1 {
+    font-size: var(--text-size-h1);
+    line-height: var(--text-height-title); 
+    font-weight: var(--text-weight-main-title);
+    letter-spacing: var(--text-tracking-title);
+}
+
+@media (max-width: 576px) {
+    .h1 {
+        font-size: 48px;
+    }
+}
+
+.h2 {
+    font-size: var(--text-size-h2);
+    line-height: var(--text-height-title); 
+    font-weight: var(--text-weight-title);
+    letter-spacing: var(--text-tracking-title);
+}
+
+.h3 {
+    font-size: var(--text-size-h3);
+    line-height: var(--text-height-title); 
+    font-weight: var(--text-weight-title); 
+    letter-spacing: var(--text-tracking-title); 
+}
+
+.text-base {
+    font-size: var(--text-size-base); 
+    line-height: var(--text-height-base); 
+    font-weight: var(--text-weight-base); 
+    letter-spacing: var(--text-tracking-base);
+}
+
+.text-sm {
+    font-size: var(--text-size-small);
+    font-weight: var(--text-weight-base); 
+    line-height: var(--text-height-base);
+    letter-spacing: var(--text-tracking-base);
+}
+
+.bold {
+    font-weight: var(--text-weight-title);
+}

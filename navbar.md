@@ -1,9 +1,9 @@
    // Получаем root css стили
     const rootStyles = getComputedStyle(document.documentElement);
-    const lightBg = rootStyles.getPropertyValue('--bg-color').trim();  // #FFFFFF
-    const lightText = rootStyles.getPropertyValue('--text-color').trim(); // #1A1A1A
-    const darkBg = rootStyles.getPropertyValue('--bg-color-dark').trim();    // #1A1A1A
-    const darkText = rootStyles.getPropertyValue('--text-color-dark').trim(); // #FFFFFF
+    const lightBg = rootStyles.getPropertyValue('--color-background').trim();  // #FFFFFF
+    const lightText = rootStyles.getPropertyValue('--color-text').trim(); // #1A1A1A
+    const darkBg = rootStyles.getPropertyValue('--color-background-dark').trim();    // #1A1A1A
+    const darkText = rootStyles.getPropertyValue('--color-text-dark').trim(); // #FFFFFF
   
     // Изначальное состояние: белый фон, темный текст
     const [navColor, setNavColor] = useState(lightBg); 

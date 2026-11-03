@@ -1,36 +1,4 @@
-:root {
-  /* Светлая тема (изначальная) */
-  --bg-color: #ffffff;
-  --text-color: #1A1A1A;
-
-  /* Темная тема (для навбара при скролле) */
-  --bg-color-dark: #1A1A1A;
-  --text-color-dark: #FFFFFF;
-
-  --hover: #1a1a1abd;
-  --opacity: 0.7;
-  --line: rgba(26, 26, 26, 0.05);
-}
-html { overscroll-behavior: contain; scroll-behavior: smooth; }
-
-:focus {
-  outline: none !important;
-}
-
-/* Для Firefox, который иногда рисует доп. обводку */
-*:focus-visible {
-  outline: none !important;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Montserrat", sans-serif;
-}
-
-
-ul {
-  list-style-type: none;
-  padding: 0;
-}
+@import './base/rest.css';
+@import './base/tokens.css';
+@import './base/typography.css';
+@import './base/globals.css';

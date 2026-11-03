@@ -1,0 +1,67 @@
+.content {
+  display: grid;
+  gap: var(--space-8);
+}
+
+.main {
+  width: 100%;
+  position: relative;
+  box-shadow: var(--shadow-md);
+}
+
+.mainImg {
+  width: inherit;
+  filter: brightness(0.4);
+  object-fit: cover;
+  border-radius: var(--radius-sm);
+}
+
+.mainImg:hover {
+  transition: 0.5s;
+  filter: brightness(0.6);
+}
+
+.mainTitle {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.list {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  place-items: center;
+  gap: var(--space-4);
+}
+
+.item {
+  display: grid;
+  place-items: center;
+  gap: var(--space-3);
+  padding: var(--space-2) var(--space-4);
+  cursor: pointer;
+  border-radius: var(--radius-sm);
+}
+
+.img {
+  object-fit: contain;
+  width: 200px;
+  height: 200px;
+}
+
+/* цвета при выделении текста */
+.button::selection {
+  background-color: var(--color-background);
+  color: var(--color-text);
+}
+
+@media (max-width: 992px) {
+}
+
+@media (max-width: 768px) {
+
+}
+
+@media (max-width: 576px) {}

@@ -1,43 +1,11 @@
-.section {
-  background-color: var(--bg-color);
-  color: var(--text-color);
-  border-bottom: 1px solid color-mix(in srgb, var(--text-color) 8%, transparent);
-}
-
-.container {
-  min-height: 100vh;
-  padding: 100px 20px;
-  max-width: 1140px;
-  margin: 0 auto;
+.content {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  gap: var(--space-1);  
 }
 
-.mainConent {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.mainTitle {
-  font-weight: 700;
-  font-size: 64px;
-  line-height: 100%;
-  letter-spacing: 5px;
-  margin-bottom: 10px;
-}
-
-.mainSubTitle {
-  font-size: 36px;
-  line-height: 100%;
-  letter-spacing: 5px;
-  font-weight: 300;
-  margin-bottom: 50px;
-}
-
-.mainButton {
+.button {
   font-size: 20px;
   line-height: 100%;
   text-align: center;
@@ -51,34 +19,20 @@
   border-radius: 4px;
   text-decoration: none;
   transition: 0.2s;
+  margin-top: var(--space-6);
 }
 
-.mainButton:hover {
-  background-color: var(--hover);
-}
-
-.mainDownText {
-  font-size: 20px;
-  font-weight: 300;
-  text-align: center;
-  letter-spacing: 2px;
-  line-height: 100%;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  bottom: 50px;
+/* цвета при выделении текста */
+.button::selection {
+  background-color: var(--color-background);
+  color: var(--color-text);
 }
 
 @media (max-width: 992px) {
-  .container {
-    max-width: 768px;
-  }
 }
 
 @media (max-width: 768px) {
-  .container {
-    max-width: 540px;
-  }
+
 }
 
 @media (max-width: 576px) {
@@ -87,21 +41,13 @@
     padding: 50px 0;
   }
 
-  .mainTitle {
+  .title {
     font-size: 36px;
   }
 
-  .mainSubTitle {
-    font-size: 18px;
-  }
-
-  .mainButton {
+  .button {
     font-size: 16px;
     width: 180px;
     height: 50px;
-  }
-
-  .mainDownText {
-    font-size: 16px;
   }
 }
