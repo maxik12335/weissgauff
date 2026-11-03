@@ -14,13 +14,13 @@ const Pages = () => {
         <Main />
 
       {/* main list */}
-        {/* <MainList variable="vstrBitTech"/>
+        <MainList variable="vstrBitTech"/>
         <MainList variable="otdelStoyTechnika"/>
         <MainList variable="melkTechnikaKuhnya"/>
         <MainList variable="malTechnikaDom"/>
         <MainList variable="klimakTechnika"/>
         <MainList variable="santKuhnya"/>
-        <MainList variable="homeAndSad"/> */}
+        <MainList variable="homeAndSad"/>
       
       {/* footer */}
         {/* <Footer /> */}
