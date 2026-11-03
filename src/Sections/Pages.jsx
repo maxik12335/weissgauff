@@ -23,7 +23,7 @@ const Pages = () => {
         <MainList variable="homeAndSad"/>
       
       {/* footer */}
-        {/* <Footer /> */}
+        <Footer />
         
     </div>
   )
