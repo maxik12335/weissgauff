@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/weissgauff/static/css/main.fa1ffa91.css",
+    "main.js": "/weissgauff/static/js/main.cff6e029.js",
+    "static/media/main.jpg": "/weissgauff/static/media/main.ea15c49dea2e7a986369.jpg",
+    "static/media/main.jpeg": "/weissgauff/static/media/main.c1cde7ce17df603df365.jpeg",
+    "static/media/1.png": "/weissgauff/static/media/1.027b3990986353ead5e4.png",
+    "static/media/6.png": "/weissgauff/static/media/6.a9ef477f6b88f9cf0ec4.png",
+    "static/media/9.png": "/weissgauff/static/media/9.931fd32f4d3fbddcd9ca.png",
+    "static/media/3.png": "/weissgauff/static/media/3.67451c6a132000dcaa8b.png",
+    "static/media/5.png": "/weissgauff/static/media/5.b6ac6d6d74134f2b44e8.png",
+    "static/media/10.png": "/weissgauff/static/media/10.2cf59c9200e09b1e9528.png",
+    "static/media/2.png": "/weissgauff/static/media/2.b2129075aa8a789b96fe.png",
+    "static/media/4.png": "/weissgauff/static/media/4.166f42631593b04811db.png",
+    "static/media/8.png": "/weissgauff/static/media/8.6f4901da9a9be8312c55.png",
+    "static/media/15.png": "/weissgauff/static/media/15.48ae0a125c60ea703c36.png",
+    "static/media/poster.jpg": "/weissgauff/static/media/poster.8f115590e911aa0b09f1.jpg",
+    "static/media/13.png": "/weissgauff/static/media/13.7e68e8d22b4ec5b7bc74.png",
+    "static/media/12.png": "/weissgauff/static/media/12.3117a99c30e66eced631.png",
+    "static/media/11.png": "/weissgauff/static/media/11.70d3e8603cbd546a2ce2.png",
+    "static/media/14.png": "/weissgauff/static/media/14.ace9a550e7a453b5fa21.png",
+    "static/media/7.png": "/weissgauff/static/media/7.9186f6896de38ec61242.png",
+    "index.html": "/weissgauff/index.html",
+    "main.fa1ffa91.css.map": "/weissgauff/static/css/main.fa1ffa91.css.map",
+    "main.cff6e029.js.map": "/weissgauff/static/js/main.cff6e029.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.fa1ffa91.css",
+    "static/js/main.cff6e029.js"
+  ]
+}
