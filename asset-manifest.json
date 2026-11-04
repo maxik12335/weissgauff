@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/weissgauff/static/css/main.e0500e50.css",
-    "main.js": "/weissgauff/static/js/main.308fc638.js",
+    "main.css": "/weissgauff/static/css/main.f0c070d2.css",
+    "main.js": "/weissgauff/static/js/main.b83c5726.js",
     "static/media/main.jpg": "/weissgauff/static/media/main.ea15c49dea2e7a986369.jpg",
     "static/media/main.jpeg": "/weissgauff/static/media/main.c1cde7ce17df603df365.jpeg",
     "static/media/1.png": "/weissgauff/static/media/1.027b3990986353ead5e4.png",
@@ -21,11 +21,11 @@
     "static/media/14.png": "/weissgauff/static/media/14.ace9a550e7a453b5fa21.png",
     "static/media/7.png": "/weissgauff/static/media/7.9186f6896de38ec61242.png",
     "index.html": "/weissgauff/index.html",
-    "main.e0500e50.css.map": "/weissgauff/static/css/main.e0500e50.css.map",
-    "main.308fc638.js.map": "/weissgauff/static/js/main.308fc638.js.map"
+    "main.f0c070d2.css.map": "/weissgauff/static/css/main.f0c070d2.css.map",
+    "main.b83c5726.js.map": "/weissgauff/static/js/main.b83c5726.js.map"
   },
   "entrypoints": [
-    "static/css/main.e0500e50.css",
-    "static/js/main.308fc638.js"
+    "static/css/main.f0c070d2.css",
+    "static/js/main.b83c5726.js"
   ]
 }
