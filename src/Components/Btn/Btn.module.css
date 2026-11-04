@@ -1,14 +1,19 @@
 .button {
-  padding: var(--space-1) var(--space-2);
-  background-color: rgb(29, 29, 29);
-  color: var(--color-text);
+  /* padding: var(--space-1) var(--space-2); */
+  /* background-color: rgb(29, 29, 29); */
+  /* color: var(--color-text); */
+  min-width: fit-content;
+  width: fit-content;
+  height: fit-content;
+  padding: var(--space-1) var(--space-4);
   border-radius: var(--radius-sm);
   transition: var(--transition-base);
   cursor: pointer;
+  display: flex;
 }
 
 .button:hover {
-  opacity: var(--color-hover-opacity);
+  /* opacity: var(--color-hover-opacity); */
 }
 
 
@@ -16,4 +21,8 @@
 
 @media (max-width: 768px) {}
 
-@media (max-width: 576px) {}
+@media (max-width: 576px) {
+  .button {
+    padding: var(--space-1) var(--space-2);
+  }
+}

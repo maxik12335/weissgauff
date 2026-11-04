@@ -1,0 +1,33 @@
+[
+  { "title": "бренд", "href": "/brand" },
+  { "title": "каталог", "href": "/catalog" },
+  {
+    "type": "dropdown",
+    "title": "сервис и гарантия",
+    "links": [
+      { "name": "доставка", "href": "/delivery" },
+      { "name": "оплата", "href": "/payment" },
+      { "name": "важная информация", "href": "/info" },
+      { "name": "условия гарантии", "href": "/warranty-terms" },
+      { "name": "заявка на сервисное обслуживание", "href": "/service-request" },
+      { "name": "заявка на заказ запасных частей", "href": "/parts-request" },
+      { "name": "заявка на техническую консультацию", "href": "/tech-consult" },
+      { "name": "форма для обращения оптовых покупателей", "href": "/wholesale-form" },
+      { "name": "установка техники", "href": "/installation" },
+      { "name": "заявка на возврат товара", "href": "/return-request" },
+      { "name": "часто задаваемые вопросы", "href": "/faq" },
+      { "name": "дополнительный год гарантии на технику Weissgauff", "href": "/extended-warranty" }
+    ]
+  },
+  { "title": "контакты", "href": "/contacts" },
+  {
+    "type": "dropdown",
+    "title": "другое",
+    "links": [
+      { "name": "шоурумы", "href": "/showrooms" },
+      { "name": "пункты выдачи", "href": "/pickup-points" },
+      { "name": "франшиза", "href": "/franchise" }
+    ]
+  },
+  { "title": "личный кабинет", "href": "/login" }
+]

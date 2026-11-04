@@ -3,17 +3,19 @@ import Footer from "../../Sections/Footer/Footer";
 import MainList from "../../Sections/MainList/MainList";
 
 const Main = () => {
+  const mainLists = [
+    "vstrBitTech",
+    "otdelStoyTechnika",
+    "melkTechnikaKuhnya",
+    "malTechnikaDom",
+    "klimakTechnika",
+    "santKuhnya",
+    "homeAndSad"
+  ]
   return (
     <div>
       <MainSection />
-      <MainList variable="vstrBitTech"/>
-      <MainList variable="otdelStoyTechnika"/>
-      <MainList variable="melkTechnikaKuhnya"/>
-      <MainList variable="malTechnikaDom"/>
-      <MainList variable="klimakTechnika"/>
-      <MainList variable="santKuhnya"/>
-      <MainList variable="homeAndSad"/>
-      <Footer />
+      {mainLists.map(item => <MainList variable={item}/>)}
     </div>
   )
 }

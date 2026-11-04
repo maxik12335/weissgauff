@@ -24,6 +24,7 @@ import Showrooms from "../pages/Showrooms/Showrooms";
 import PickupPoints from "../pages/PickupPoints/PickupPoints";
 import Franchise from "../pages/Franchise/Franchise";
 import Login from "../pages/Login/Login";
+import CatalogPage from "../pages/CatalogPage/CatalogPage";
 
 const AppRouter = () => {
   const { isAuth, isLoading: authLoading } = useContext(AuthContext);
@@ -48,26 +49,29 @@ const AppRouter = () => {
   return (
     <Routes>
       {/* Публичные */}
-      <Route path="/" element={<Main />} />
-      <Route path="/brand" element={<Brand />} />
-      <Route path="/catalog" element={<Catalog />} />
-      <Route path="/delivery" element={<Delivery />} />
-      <Route path="/payment" element={<Payment />} />
-      <Route path="/info" element={<Info />} />
-      <Route path="/warranty-terms" element={<WarrantyTerms />} />
-      <Route path="/service-request" element={<ServiceRequest />} />
-      <Route path="/parts-request" element={<PartsRequest />} />
-      <Route path="/tech-consult" element={<TechConsult />} />
-      <Route path="/wholesale-form" element={<WholesaleForm />} />
-      <Route path="/installation" element={<Installation />} />
-      <Route path="/return-request" element={<ReturnRequest />} />
-      <Route path="/faq" element={<Faq />} />
-      <Route path="/extended-warranty" element={<ExtendedWarranty />} />
-      <Route path="/contacts" element={<Contacts />} />
-      <Route path="/showrooms" element={<Showrooms />} />
-      <Route path="/pickup-points" element={<PickupPoints />} />
-      <Route path="/franchise" element={<Franchise />} />
-      <Route path="/login" element={<Login />} />
+
+      {/* menu */}
+        <Route path="/" element={<Main />} />
+        <Route path="/brand" element={<Brand />} />
+        <Route path="/catalog" element={<Catalog />} />
+        <Route path="/catalog/*" element={<CatalogPage />} />
+        <Route path="/delivery" element={<Delivery />} />
+        <Route path="/payment" element={<Payment />} />
+        <Route path="/info" element={<Info />} />
+        <Route path="/warranty-terms" element={<WarrantyTerms />} />
+        <Route path="/service-request" element={<ServiceRequest />} />
+        <Route path="/parts-request" element={<PartsRequest />} />
+        <Route path="/tech-consult" element={<TechConsult />} />
+        <Route path="/wholesale-form" element={<WholesaleForm />} />
+        <Route path="/installation" element={<Installation />} />
+        <Route path="/return-request" element={<ReturnRequest />} />
+        <Route path="/faq" element={<Faq />} />
+        <Route path="/extended-warranty" element={<ExtendedWarranty />} />
+        <Route path="/contacts" element={<Contacts />} />
+        <Route path="/showrooms" element={<Showrooms />} />
+        <Route path="/pickup-points" element={<PickupPoints />} />
+        <Route path="/franchise" element={<Franchise />} />
+        <Route path="/login" element={<Login />} />
 
       {/* 404 */}
       <Route path="*" element={<Navigate to="/" />} />

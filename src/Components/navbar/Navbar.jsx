@@ -3,53 +3,11 @@ import { useState } from "react";
 import Dropdown from "../Dropdown/Dropdown.jsx";
 import NavLink from "../NavLink/NavLink.jsx";
 import CitySelector from "../CitySelector/CitySelector.jsx";
+import menuItems from "../../data/menu.json";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)
 
-  const menuItems = [
-    // Главные кнопки (просто href)
-    { title: 'бренд', href: '/brand' },
-    { title: 'каталог', href: '/catalog' },
-
-    // Выпадашка 1 (массив объектов {name, href})
-    { 
-      type: 'dropdown', 
-      title: 'сервис и гарантия', 
-      links: [
-        { name: 'доставка', href: '/delivery' },
-        { name: 'оплата', href: '/payment' },
-        { name: 'важная информация', href: '/info' },
-        { name: 'условия гарантии', href: '/warranty-terms' },
-        { name: 'заявка на сервисное обслуживание', href: '/service-request' },
-        { name: 'заявка на заказ запасных частей', href: '/parts-request' },
-        { name: 'заявка на техническую консультацию', href: '/tech-consult' },
-        { name: 'форма для обращения оптовых покупателей', href: '/wholesale-form' },
-        { name: 'установка техники', href: '/installation' },
-        { name: 'заявка на возврат товара', href: '/return-request' },
-        { name: 'часто задаваемые вопросы', href: '/faq' },
-        { name: 'дополнительный год гарантии на технику Weissgauff', href: '/extended-warranty' }
-      ] 
-    },
-
-    // Главные кнопки
-    { title: 'контакты', href: '/contacts' },
-
-    // Выпадашка 2
-    { 
-      type: 'dropdown', 
-      title: 'другое', 
-      links: [
-        { name: 'шоурумы', href: '/showrooms' },
-        { name: 'пункты выдачи', href: '/pickup-points' },
-        { name: 'франшиза', href: '/franchise' }
-      ] 
-    },
-
-    // Главная кнопка
-    { title: 'личный кабинет', href: '/login' }
-  ];
-  
   const closeMobyleMenu = () => {
     setIsOpen(false);
   }

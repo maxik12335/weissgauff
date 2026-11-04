@@ -1,12 +1,9 @@
-// import { useEffect, useState } from "react";
 import classes from "./Btn.module.css"
 
-
-// const Navbar = ({navColor, textColor}) => {
-const Btn = ({children}) => {
+const Btn = ({children, className}) => {
 
   return (
-    <div className={`${classes.button} text-sm`}>
+    <div className={`${classes.button} ${className ? className : ''} text-sm`}>
       {children}
     </div>
   )

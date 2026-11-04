@@ -47,7 +47,6 @@
   padding: var(--space-2) var(--space-4);
   cursor: pointer;
   border-radius: var(--radius-sm);
-  background-color: #0f0e0e;
 }
 
 .img {

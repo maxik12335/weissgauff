@@ -209,7 +209,7 @@ const MainList = ({variable}) => {
 
           <ul className={classes.list}>
             {data.titles.map((item, i) => (
-              <li key={i} className={`${classes.item} hover-bg`}>
+              <li key={i} className={`${classes.item} bg-color hover-bg`}>
                 <img className={classes.img} src={data.images[i]} alt="img" />
                 <p className="text-sm" style={{textAlign: 'center'}}>{data.titles[i]}</p>
               </li>

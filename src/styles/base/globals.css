@@ -57,6 +57,18 @@
   background-color: var(--color-hover-bg);
 }
 
+.bg-color {
+  background-color: #0f0e0e;
+}
+
+.btn-fon-bg {
+  background-color: #141414;
+}
+
+.btn-fon-bg:hover {
+  background-color: var(--color-background);
+}
+
 .arrow {
   display: inline-block;
   width: 0;
@@ -69,9 +81,20 @@
   border-left: 4px solid transparent;
 }
 
+.arrow-link-box {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.arrow-link {
+  width: 35px;
+  height: 35px;
+}
+
 .container {
   max-width: 1140px;
-  padding: 100px 20px;
+  padding: 150px 20px;
   margin: 0 auto;
   min-height: 100vh;
 
@@ -89,6 +112,7 @@
 
 .container-footer {
   max-width: 1140px;
+  /* min-height: 100vh; */
   margin: 0 auto;
   padding: var(--space-8) 20px;
 }
@@ -99,6 +123,10 @@
       .container-footer {
         max-width: 768px;
       }
+
+      .container {
+        padding: 100px 20px;
+      }
     }
 
     @media (max-width: 768px) {
@@ -107,6 +135,10 @@
       .container-footer {
         max-width: 540px;
       }
+
+      .container {
+        padding: 100px 20px;
+      }
     }
 
     @media (max-width: 576px) {
@@ -114,5 +146,9 @@
       .container-navbar,
       .container-footer {
         max-width: 100%;
+      }
+
+      .container {
+        padding: 100px 20px;
       }
     }

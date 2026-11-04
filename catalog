@@ -1,0 +1,348 @@
+const catalog = [
+  {
+    title: 'Духовые шкафы',
+    href: '/catalog/ovens',
+    sub: [
+      { title: 'Компактные духовые шкафы', href: '/catalog/ovens/compact' },
+      { title: 'Духовые шкафы с СВЧ', href: '/catalog/ovens/microwave' },
+      { title: 'Духовые шкафы электрические', href: '/catalog/ovens/electric' },
+      { title: 'Духовые шкафы газовые', href: '/catalog/ovens/gas' },
+      { title: 'Аксессуары к духовым шкафам', href: '/catalog/ovens/accessories' }
+    ]
+  },
+  {
+    title: 'Варочные панели электрические',
+    href: '/catalog/cooktops-electric',
+    sub: [
+      { title: 'Стеклокерамические варочные панели', href: '/catalog/cooktops-electric/glass-ceramic' },
+      { title: 'Индукционные варочные панели', href: '/catalog/cooktops-electric/induction' },
+      { title: 'Варочные панели Домино', href: '/catalog/cooktops-electric/domino' }
+    ]
+  },
+  {
+    title: 'Варочные панели газовые',
+    href: '/catalog/cooktops-gas',
+    sub: [
+      { title: 'Газовые панели на металле', href: '/catalog/cooktops-gas/metal' },
+      { title: 'Газовые панели на стекле', href: '/catalog/cooktops-gas/glass' },
+      { title: 'Газовые панели Домино', href: '/catalog/cooktops-gas/domino' }
+    ]
+  },
+  {
+    title: 'Встраиваемые микроволновые печи',
+    href: '/catalog/microwaves-built-in',
+    sub: [
+      { title: 'Микроволновые печи в верхнюю полку и колонну', href: '/catalog/microwaves-built-in/shelf-column' },
+      { title: 'Микроволновые печи в колонну', href: '/catalog/microwaves-built-in/column' }
+    ]
+  },
+  {
+    title: 'Встраиваемые посудомоечные машины',
+    href: '/catalog/dishwashers-built-in',
+    sub: [
+      { title: 'Встраиваемые компактные посудомоечные машины', href: '/catalog/dishwashers-built-in/compact' },
+      { title: 'Встраиваемые посудомоечные машины 45 см', href: '/catalog/dishwashers-built-in/45cm' },
+      { title: 'Встраиваемые посудомоечные машины 60 см', href: '/catalog/dishwashers-built-in/60cm' },
+      { title: 'Аксессуары к посудомоечным машинам', href: '/catalog/dishwashers-built-in/accessories' }
+    ]
+  },
+  {
+    title: 'Вытяжки',
+    href: '/catalog/hoods',
+    sub: [
+      { title: 'Встраиваемые вытяжки', href: '/catalog/hoods/built-in' },
+      { title: 'Купольные вытяжки', href: '/catalog/hoods/dome' },
+      { title: 'Цилиндрические вытяжки', href: '/catalog/hoods/cylindrical' },
+      { title: 'Островные вытяжки', href: '/catalog/hoods/island' },
+      { title: 'Плоские вытяжки', href: '/catalog/hoods/flat' },
+      { title: 'Аксессуары для вытяжек', href: '/catalog/hoods/accessories' }
+    ]
+  },
+  {
+    title: 'Встраиваемые стиральные машины',
+    href: '/catalog/washers-built-in',
+    sub: [] // подкатегорий нет, можно оставить пустым
+  },
+  {
+    title: 'Встраиваемые холодильники',
+    href: '/catalog/fridges-built-in',
+    sub: [
+      { title: 'Встраиваемые холодильники', href: '/catalog/fridges-built-in/standard' },
+      { title: 'Встраиваемые холодильники Side-by-Side', href: '/catalog/fridges-built-in/side-by-side' },
+      { title: 'Встраиваемые морозильники', href: '/catalog/fridges-built-in/freezers' },
+      { title: 'Встраиваемые винные шкафы', href: '/catalog/fridges-built-in/wine' }
+    ]
+  },
+  {
+    title: 'Встраиваемые кофемашины',
+    href: '/catalog/coffee-machines-built-in',
+    sub: []
+  },
+  {
+    title: 'Отдельностоящие плиты',
+    href: '/catalog/freestanding-stoves',
+    sub: []
+  },
+  {
+    title: 'Отдельностоящие посудомоечные машины',
+    href: '/catalog/dishwashers-freestanding',
+    sub: [
+      { title: 'Отдельностоящие посудомоечные машины на 45 см', href: '/catalog/dishwashers-freestanding/45cm' },
+      { title: 'Отдельностоящие посудомоечные машины на 60 см', href: '/catalog/dishwashers-freestanding/60cm' },
+      { title: 'Настольные посудомоечные машины', href: '/catalog/dishwashers-freestanding/countertop' }
+    ]
+  },
+  {
+    title: 'Отдельностоящие стиральные машины',
+    href: '/catalog/washers-freestanding',
+    sub: [
+      { title: 'Стиральные машины без сушки', href: '/catalog/washers-freestanding/no-dry' },
+      { title: 'Стиральные машины с сушкой', href: '/catalog/washers-freestanding/with-dry' },
+      { title: 'Сушильные машины', href: '/catalog/washers-freestanding/dryers' },
+      { title: 'Стиральные машины с вертикальной загрузкой', href: '/catalog/washers-freestanding/top-load' },
+      { title: 'Аксессуары к стиральным машинам', href: '/catalog/washers-freestanding/accessories' }
+    ]
+  },
+  {
+    title: 'Отдельностоящие сушильные машины',
+    href: '/catalog/dryers-freestanding',
+    sub: [
+      { title: 'Сушильные машины Узкие', href: '/catalog/dryers-freestanding/narrow' },
+      { title: 'Сушильные машины супер компактные', href: '/catalog/dryers-freestanding/super-compact' }
+    ]
+  },
+  {
+    title: 'Комплекты для колонны',
+    href: '/catalog/column-kits',
+    sub: []
+  },
+  {
+    title: 'Отдельностоящие холодильники',
+    href: '/catalog/fridges-freestanding',
+    sub: [
+      { title: '1-дверные холодильники', href: '/catalog/fridges-freestanding/1-door' },
+      { title: '2-дверные холодильники', href: '/catalog/fridges-freestanding/2-door' },
+      { title: '3-дверные холодильники FrenchDoor', href: '/catalog/fridges-freestanding/french-door-3' },
+      { title: '4-дверные холодильники CrossDoor', href: '/catalog/fridges-freestanding/cross-door-4' },
+      { title: 'Холодильники Side-by-Side NoFrost', href: '/catalog/fridges-freestanding/side-by-side-nofrost' },
+      { title: 'Винные шкафы', href: '/catalog/fridges-freestanding/wine' },
+      { title: 'Морозильники', href: '/catalog/fridges-freestanding/freezers' }
+    ]
+  },
+  {
+    title: 'Микроволновые печи',
+    href: '/catalog/microwaves',
+    sub: []
+  },
+  {
+    title: 'Мини-печи',
+    href: '/catalog/mini-ovens',
+    sub: []
+  },
+  {
+    title: 'Строительство и ремонт',
+    href: '/catalog/construction-repair',
+    sub: [
+      { title: 'Сантехника', href: '/catalog/construction-repair/plumbing' },
+      { title: 'Инструменты', href: '/catalog/construction-repair/tools' },
+      { title: 'Отопление', href: '/catalog/construction-repair/heating' }
+    ]
+  },
+  {
+    title: 'Дом и сад',
+    href: '/catalog/home-garden',
+    sub: [
+      { title: 'Садовая техника', href: '/catalog/home-garden/garden-tech' },
+      { title: 'Снегоуборочные машины', href: '/catalog/home-garden/snow-blowers' }
+    ]
+  },
+  {
+    title: 'Туризм и активный отдых',
+    href: '/catalog/outdoor-active',
+    sub: [
+      { title: 'Фонари', href: '/catalog/outdoor-active/flashlights' }
+    ]
+  },
+  {
+    title: 'Автотовары',
+    href: '/catalog/auto',
+    sub: [
+      { title: 'Автомобильные компрессоры', href: '/catalog/auto/compressors' }
+    ]
+  },
+  {
+    title: 'Кронштейны и стойки для телевизоров и аудиотехники',
+    href: '/catalog/mounts-racks',
+    sub: [
+      { title: 'Кронштейны для телевизоров', href: '/catalog/mounts-racks/tv-mounts' },
+      { title: 'Стойки для телевизоров и аудиотехники', href: '/catalog/mounts-racks/racks' }
+    ]
+  },
+  {
+    title: 'Климатическая техника',
+    href: '/catalog/climate',
+    sub: [
+      { title: 'Водонагреватели электрические', href: '/catalog/climate/water-heaters' },
+      { title: 'Вентиляторы', href: '/catalog/climate/fans' },
+      { title: 'Обогреватели', href: '/catalog/climate/heaters' }
+    ]
+  },
+  {
+    title: 'Пылесосы',
+    href: '/catalog/vacuums',
+    sub: [
+      { title: 'Вертикальные пылесосы для сухой уборки', href: '/catalog/vacuums/upright-dry' },
+      { title: 'Вертикальные пылесосы для сухой и влажной уборки', href: '/catalog/vacuums/upright-wet-dry' },
+      { title: 'Напольные пылесосы', href: '/catalog/vacuums/floor' },
+      { title: 'Строительные пылесосы', href: '/catalog/vacuums/construction' },
+      { title: 'Моющие пылесосы с паром', href: '/catalog/vacuums/steam-wash' },
+      { title: 'Аксессуары для пылесоса', href: '/catalog/vacuums/accessories' }
+    ]
+  },
+  {
+    title: 'Кофемашины',
+    href: '/catalog/coffee-machines',
+    sub: []
+  },
+  {
+    title: 'Кофе в зернах',
+    href: '/catalog/coffee-beans',
+    sub: []
+  },
+  {
+    title: 'Уход за одеждой',
+    href: '/catalog/laundry-care',
+    sub: [
+      { title: 'Парогенераторы', href: '/catalog/laundry-care/steam-generators' },
+      { title: 'Вертикальные отпариватели', href: '/catalog/laundry-care/vertical-steamers' },
+      { title: 'Ручные отпариватели', href: '/catalog/laundry-care/hand-steamers' },
+      { title: 'Утюги', href: '/catalog/laundry-care/irons' }
+    ]
+  },
+  {
+    title: 'Техника для красоты и здоровья',
+    href: '/catalog/beauty-health',
+    sub: [
+      { title: 'Фены', href: '/catalog/beauty-health/hair-dryers' },
+      { title: 'Ирригаторы', href: '/catalog/beauty-health/irrigators' },
+      { title: 'Электрические зубные щетки', href: '/catalog/beauty-health/toothbrushes' },
+      { title: 'Массажеры для ног', href: '/catalog/beauty-health/foot-massagers' },
+      { title: 'Массажеры для глаз', href: '/catalog/beauty-health/eye-massagers' },
+      { title: 'Вибротренажеры', href: '/catalog/beauty-health/vibration-trainers' },
+      { title: 'Массажеры роликовые', href: '/catalog/beauty-health/roller-massagers' }
+    ]
+  },
+  {
+    title: 'Чайники',
+    href: '/catalog/kettles',
+    sub: []
+  },
+  {
+    title: 'Термопоты',
+    href: '/catalog/thermo-pots',
+    sub: []
+  },
+  {
+    title: 'Грили электрические',
+    href: '/catalog/grills-electric',
+    sub: []
+  },
+  {
+    title: 'Настольные кухонные плиты',
+    href: '/catalog/table-cookers',
+    sub: []
+  },
+  {
+    title: 'Мясорубки',
+    href: '/catalog/meat-grinders',
+    sub: []
+  },
+  {
+    title: 'Миксеры',
+    href: '/catalog/mixers',
+    sub: []
+  },
+  {
+    title: 'Блендеры',
+    href: '/catalog/blenders',
+    sub: []
+  },
+  {
+    title: 'Кухонные машины',
+    href: '/catalog/kitchen-machines',
+    sub: []
+  },
+  {
+    title: 'Мультиварки',
+    href: '/catalog/multicookers',
+    sub: [
+      { title: 'Аксессуары для мультиварок', href: '/catalog/multicookers/accessories' }
+    ]
+  },
+  {
+    title: 'Аэрогрили',
+    href: '/catalog/air-fryers',
+    sub: []
+  },
+  {
+    title: 'Дегидраторы',
+    href: '/catalog/dehydrators',
+    sub: []
+  },
+  {
+    title: 'Соковыжималки',
+    href: '/catalog/juicers',
+    sub: []
+  },
+  {
+    title: 'Тостеры',
+    href: '/catalog/toasters',
+    sub: []
+  },
+  {
+    title: 'Мельнички и Штопоры электрические',
+    href: '/catalog/mills-corkscrews',
+    sub: []
+  },
+  {
+    title: 'Кухонные мойки',
+    href: '/catalog/sinks',
+    sub: []
+  },
+  {
+    title: 'Кухонные смесители',
+    href: '/catalog/faucets',
+    sub: []
+  },
+  {
+    title: 'Измельчитель пищевых отходов',
+    href: '/catalog/food-disposers',
+    sub: []
+  },
+  {
+    title: 'Текстиль',
+    href: '/catalog/textiles',
+    sub: [
+      { title: 'Матрасы', href: '/catalog/textiles/mattresses' }
+    ]
+  },
+  {
+    title: 'Хозяйственные товары',
+    href: '/catalog/household',
+    sub: [
+      { title: 'Инвентарь для уборки', href: '/catalog/household/cleaning-tools' },
+      { title: 'Гладильные доски', href: '/catalog/household/ironing-boards' },
+      { title: 'Сенсорные ведра', href: '/catalog/household/sensor-bins' }
+    ]
+  },
+  {
+    title: 'Распродажа витринных образцов',
+    href: '/catalog/clearance-showroom',
+    sub: []
+  },
+  {
+    title: 'Акционные товары',
+    href: '/catalog/promotions',
+    sub: []
+  }
+];
