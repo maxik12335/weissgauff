@@ -9,6 +9,7 @@ html {
   /* overscroll-behavior: contain; */
   /* плавная прокрутка */
   scroll-behavior: smooth; 
+  background-color: var(--color-background);
 }
 
 a {
@@ -31,3 +32,48 @@ ul {
   list-style-type: none;
   padding: 0;
 }
+
+/* ======= 1. СТАБИЛЬНОСТЬ ЭКРАНА ======= */
+/* 
+   Это самое важное. Когда мы скрываем скроллбар, 
+   body "прыгает" на ширину этого скроллбра.
+   Этот код резервирует место под скроллбар, 
+   чтобы верстка стояла мертво.
+*/
+html {
+  overflow-y: scroll; /* Заставляем браузер всегда держать место под скролл */
+  scrollbar-width: none; /* Для Firefox: скрываем скроллбар */
+}
+
+/* ======= 2. СТИЛИ СКРОЛЛБАРА ======= */
+
+/* Для Chrome, Safari, Edge (WebKit) */
+::-webkit-scrollbar {
+  width: 0px; /* Делаем ползунок шириной 0 */
+  height: 0px;
+  background: transparent; /* Фон трека прозрачный */
+}
+
+/* Сам ползунок (на всякий случай) */
+::-webkit-scrollbar-thumb {
+  background: transparent;
+  border-radius: 0;
+}
+
+/* Для Firefox (уже сделали через html, но дублируем для трека) */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent;
+}
+
+/* ======= 3. КАСТОМНАЯ СТРЕЛКА (ОПЦИОНАЛЬНО) ======= */
+/* Если ты хочешь оставить маленькую стрелочку в углу (как в Telegram) */
+/* Обычно это не нужно, если цель — полная чистота */
+/*
+body::-webkit-scrollbar-button:vertical:increment {
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23888'%3E%3Cpath d='M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z'/%3E%3C/svg%3E") center no-repeat;
+  background-size: 12px;
+  width: 16px;
+  height: 16px;
+}
+*/

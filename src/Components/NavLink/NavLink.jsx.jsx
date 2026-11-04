@@ -1,10 +1,11 @@
+import { NavLink as RRNavLink } from 'react-router-dom';
 import classes from './NavLink.module.css'
 
-const NavLink = ({ href, children, onClick }) => {
+const NavLink = ({ href, children, onClick, className }) => {
   return (
-    <a href={href} className={`${classes.link} text-sm hover`} onClick={onClick}>
+    <RRNavLink to={href} className={`${className ? className : classes.link + ' text-sm hover'}`} onClick={onClick}>
       {children}
-    </a>
+    </RRNavLink>
   );
 };
 

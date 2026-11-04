@@ -1,6 +1,6 @@
 import Navbar from "../Components/navbar/Navbar";
 import Footer from "./Footer/Footer";
-import Main from "./Main/Main";
+import Main from "./Main/MainSection";
 import MainList from "./MainList/MainList";
 
 const Pages = () => {

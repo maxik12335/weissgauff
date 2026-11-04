@@ -1,6 +1,6 @@
-import classes from "./Main.module.css"
+import classes from "./MainSection.module.css"
 
-const Main = () => {
+const MainSection = () => {
   return (
     <div className="section line-dark-section"> 
       <div className="container">
@@ -13,4 +13,4 @@ const Main = () => {
   )
 }
 
-export default Main;
+export default MainSection;

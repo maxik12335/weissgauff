@@ -1,0 +1,33 @@
+/* Loader.module.css */
+
+
+.loader {
+  width: 50px;
+  height: 50px;
+  border: 3px solid var(--color-text);
+  border-top-color: transparent; /* Делаем "пропеллер" */
+  border-radius: 50%;
+
+  /* Центруем блок */
+  position: fixed;
+  left: 50%;
+  top: 50%;
+
+  /* 
+    АНИМАЦИЯ: 
+    Мы пишем translate и rotate в ОДНОЙ строке.
+    Сначала отодвигаем (-50%, -50%), а потом вращаем.
+  */
+  animation: spin 1s linear infinite;
+  transform: translate(-50%, -50%) rotate(0deg); /* Базовое состояние */
+}
+
+/* Сама анимация */
+@keyframes spin {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
