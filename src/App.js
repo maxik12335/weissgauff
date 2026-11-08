@@ -10,7 +10,7 @@ import Footer from './Sections/Footer/Footer';
 function App() {
   const [isAuth, setIsAuth] = useState(false)
   const [isLoading, setIsLoading] = useState(true)
-  
+
   useEffect(() => {
     if(localStorage.getItem('auth')) {
       setIsAuth(true)
@@ -29,7 +29,7 @@ function App() {
       setIsAuth,
       isLoading
     }}>
-      <BrowserRouter >
+      <BrowserRouter basename={process.env.PUBLIC_URL}>
         <Navbar />
         <AppRouter />
         <Footer />
