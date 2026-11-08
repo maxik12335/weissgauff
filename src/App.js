@@ -29,7 +29,7 @@ function App() {
       setIsAuth,
       isLoading
     }}>
-      <BrowserRouter basename="/weissgauff">
+      <BrowserRouter >
         <Navbar />
         <AppRouter />
         <Footer />
