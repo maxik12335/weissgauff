@@ -37,31 +37,34 @@ const renderPage = (category, sub) => {
       <div className="container">
         <div className="content">
 
-          {/* хлебные крошки */}
 
-          <div className={classes.breadcrumbs}>
-            <NavLink to="/catalog" className="text-sm hover">каталог</NavLink>
-            {sub && (
-              <>
-                <span className="text-sm">&nbsp;/&nbsp;</span>
-                <NavLink to={category.href} className="text-sm hover">{category.title}</NavLink>
-              </>
+          <div className={classes.titleBox}>
+            {/* хлебные крошки */}
+
+            <div className={classes.breadcrumbs}>
+              <NavLink to="/catalog" className="text-sm hover">каталог</NavLink>
+              {sub && (
+                <>
+                  <span className="text-sm">&nbsp;/&nbsp;</span>
+                  <NavLink to={category.href} className="text-sm hover">{category.title}</NavLink>
+                </>
+              )}
+            </div>
+
+            <h1 className="h2 line-dark-text">{sub ? sub.title : category.title}</h1>
+
+            {/* подкатегории */}
+
+            {!sub && category.sub.length > 0 && (
+              <ul className={classes.subList}>
+                {category.sub.map(item => (
+                  <li key={item.href}>
+                    <NavLink to={item.href} className="text-base hover">{item.title}</NavLink>
+                  </li>
+                ))}
+              </ul>
             )}
           </div>
-
-          <h1 className="h2 line-dark-text">{sub ? sub.title : category.title}</h1>
-
-          {/* подкатегории */}
-
-          {!sub && category.sub.length > 0 && (
-            <ul className={classes.subList}>
-              {category.sub.map(item => (
-                <li key={item.href}>
-                  <NavLink to={item.href} className="text-base hover">{item.title}</NavLink>
-                </li>
-              ))}
-            </ul>
-          )}
 
           {/* список товаров */}
 
@@ -75,24 +78,21 @@ const renderPage = (category, sub) => {
                     <div className={classes.imgBox} style={{ backgroundImage: `url(${product.image})` }} />
 
                     <div className={classes.topBody}>
-                      <h3 className={`${classes.title} h3 bold line-dark-text`}>
-                        {product.title}
-                      </h3>
+                      <div className={classes.topBodyContent}>
+                        <h3 className={`${classes.title} h3 bold`}>
+                          {product.title} <p className="text-base">{product.price}</p>
+                        </h3>
 
-                      {/* Рейтинг и отзывы */}
-
-                      <div className={classes.priceRating}>
+                        {/* Рейтинг и отзывы */}
                         <div className={classes.rating}>
                           <p className="text-base bold">{product.rating}</p>
                           <p className='text-base'> ({product.reviewsCount} отзывов)</p>
                         </div>
-
-                        <p className="text-base">{product.price}</p>
                       </div>
 
                       <Btn className={`${classes.btn} btn-fon-bg`}>купить</Btn>
-
                     </div>
+
                   </div>
 
                   <div className={classes.body}>
